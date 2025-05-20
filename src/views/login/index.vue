@@ -41,6 +41,9 @@
 import { reactive, ref } from 'vue'
 import { login, register } from '@/api/login'
 import type { FormItemProps, FormProps } from 'element-plus'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
 //默认打开的卡片
 const activeName = ref('first')
 //表单标签位置
@@ -61,9 +64,10 @@ const registerData: FormData = reactive({
   rePassword: '',
 })
 
-const Login = async () => {
-  const res = await login(loginData)
-  console.log(res)
+const Login = () => {
+  router.push('/menu')
+  // const res = await login(loginData)
+  // console.log(res)
 }
 
 const Register = async () => {
