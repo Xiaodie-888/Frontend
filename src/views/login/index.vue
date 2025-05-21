@@ -64,10 +64,20 @@ const registerData: FormData = reactive({
   rePassword: '',
 })
 
-const Login = () => {
-  router.push('/menu')
-  // const res = await login(loginData)
-  // console.log(res)
+// const Login = () => {
+//   router.push('/menu')
+//   // const res = await login(loginData)
+//   // console.log(res)
+// }
+
+const Login = async () => {
+  const res = await login(loginData)
+  console.log(res)
+  if (res.status == 0) {
+    localStorage.setItem('account', res.results.account)
+    localStorage.setItem('name', res.results.name)
+    router.push('/set')
+  }
 }
 
 const Register = async () => {

@@ -18,13 +18,15 @@
       </el-aside>
       <el-container>
         <el-header>
-          <div class="left-content">欢迎登录本系统</div>
+          <div class="left-content">亲爱的 {{ name }} 欢迎登录本系统</div>
           <div class="right-content">
             <el-avatar :size="34" :src="circleUrl" />
             <span class="exit" @click="exit">退出登陆</span>
           </div>
         </el-header>
-        <el-main>Main</el-main>
+        <el-main>
+          <router-view></router-view>
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -34,6 +36,7 @@
 import { Setting, User } from '@element-plus/icons-vue'
 import { reactive, toRefs } from 'vue'
 import { useRouter } from 'vue-router'
+import { ref } from 'vue'
 const router = useRouter()
 
 const state = reactive({
@@ -41,8 +44,9 @@ const state = reactive({
 })
 const { circleUrl } = toRefs(state)
 
+const name = ref(localStorage.getItem('name'))
 const exit = () => {
-  router.push('/login')
+  router.push('/')
 }
 </script>
 
@@ -77,5 +81,10 @@ const exit = () => {
       cursor: pointer;
     }
   }
+}
+
+.el-main {
+  padding: 0;
+  background-color: #f3f4fa;
 }
 </style>
