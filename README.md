@@ -1,40 +1,109 @@
-# 后台前端
+# 后台管理系统前端
 
-This template should help get you started developing with Vue 3 in Vite.
+## 项目介绍 📋
+这是一个基于 Vue 3 + TypeScript + Element Plus 构建的后台管理系统前端项目。系统采用最新的前端技术栈，提供了一套完整的后台管理功能解决方案。
 
-## Recommended IDE Setup
+## 系统功能 ✨
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### 1. 用户权限管理
+- 🔐 多角色权限管理
+- 👥 用户管理与分配
+- 🚦 动态路由权限控制
 
-## Type Support for `.vue` Imports in TS
+### 2. 系统功能
+- 📊 数据看板（ECharts 图表展示）
+- 📝 表单管理
+- 📋 列表展示与数据处理
+- 🔍 高级检索功能
+- 📁 文件上传下载
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+### 3. 系统特色
+- 🎨 可自定义主题
+- 📱 响应式布局，支持移动端
+- 🌐 国际化支持
+- 🎯 页面权限控制
+- 💾 数据持久化存储
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## 技术选型 🛠️
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- **核心框架：** Vue 3.3.11
+- **构建工具：** Vite 5.0.10
+- **UI 框架：** Element Plus 2.4.4
+- **状态管理：** Pinia 2.1.7
+- **路由管理：** Vue Router 4.2.5
+- **图表库：** ECharts 5.4.3
+- **HTTP 工具：** Axios 1.6.5
+- **CSS 预处理：** SASS
+- **开发语言：** TypeScript
 
-## Customize configuration
+## 快速开始 🚀
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### 环境要求
+- Node.js >= 16.0.0
+- npm 或 yarn 或 pnpm
 
-## Project Setup
+### 安装
+```bash
+# 克隆项目
+git clone [项目地址]
 
-```sh
-npm install
+# 进入项目目录
+cd [项目名]
+
+# 安装依赖
+pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+### 开发
+```bash
+# 启动开发服务器
+pnpm dev
+```
+访问 http://localhost:8080
 
-```sh
-npm run dev
+### 构建
+```bash
+# 构建生产版本
+pnpm build
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
+## 项目结构 📁
 ```
+src/
+├── api/                # API 接口管理
+├── assets/            # 静态资源
+├── components/        # 公共组件
+├── layouts/           # 布局组件
+├── router/            # 路由配置
+├── store/             # Pinia 状态管理
+├── styles/            # 全局样式
+├── utils/             # 工具函数
+└── views/             # 页面组件
+```
+
+## 核心功能展示 🎯
+
+### 登录界面
+- 账号密码登录
+- 记住密码功能
+- 验证码校验
+
+### 主控面板
+- 数据统计概览
+- 图表数据展示
+- 快捷功能入口
+
+### 系统管理
+- 用户管理
+- 角色权限
+- 菜单配置
+- 系统设置
+
+
+## 浏览器支持 🌍
+
+- Chrome（推荐）
+- Firefox
+- Safari
+- Edge
+
