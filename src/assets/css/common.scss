@@ -1,0 +1,34 @@
+// 外壳
+.common-wrapper {
+  padding: 0px 8px 8px 8px;
+  // 计算 减去了头部还有面包屑 + 2X8=16边距
+  height: calc(100% - 38px);
+
+  // 内容
+  .common-content {
+    height: 100%;
+    background: #fff;
+  }
+}
+
+.table-header{
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+//表格区域
+.table-content{
+  padding: 0px 10px;
+}
+//底部分页
+.table-footer{
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 10px 0 0;
+}
+
+:deep(.el-input){
+  width: 240px;
+}
